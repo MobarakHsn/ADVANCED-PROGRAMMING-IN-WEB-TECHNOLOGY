@@ -16,3 +16,6 @@ use App\Http\Controllers\Task1Controller;
 
 Route::get('/homepage',[Task1Controller::class,'course'])->name('course');
 Route::get('/contactus',[Task1Controller::class,'contact'])->name('contact');
+Route::get('/admin',[Task1Controller::class,'admin'])->name('admin');
+Route::get('/student',[Task1Controller::class,'student'])->name('student');
+Route::get('/login',[Task1Controller::class,'login'])->name('login');

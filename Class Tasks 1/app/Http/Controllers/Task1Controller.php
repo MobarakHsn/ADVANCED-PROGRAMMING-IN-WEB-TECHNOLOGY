@@ -64,4 +64,57 @@ class Task1Controller extends Controller
         
         return view('Task1.viewcontact')->with('contacts',$contacts);
     }
+
+    public function admin()
+    {
+        $courses=array();
+        $course=array
+        (
+            "course"=>"Programming With Python",
+            "instructor"=>"Mr. David",
+            "duration"=>"4 Months",
+            "starts"=>"10th Feunruary 2022"
+        );
+        $course=(object)$course;
+        $courses[]=$course;
+        $course=array
+        (
+            "course"=>"Advance web tech",
+            "instructor"=>"Mr. Hamid",
+            "duration"=>"3 Months",
+            "starts"=>"11th Feunruary 2022"
+        );
+        $course=(object)$course;
+        $courses[]=$course;
+        $courses=(object)$courses;
+        return view('Task1.admin')->with('courses',$courses);
+    }
+    public function student()
+    {
+        $courses=array();
+        $course=array
+        (
+            "course"=>"Programming With Python",
+            "instructor"=>"Mr. David",
+            "duration"=>"4 Months",
+            "starts"=>"10th Feunruary 2022"
+        );
+        $course=(object)$course;
+        $courses[]=$course;
+        $course=array
+        (
+            "course"=>"Advance web tech",
+            "instructor"=>"Mr. Hamid",
+            "duration"=>"3 Months",
+            "starts"=>"11th Feunruary 2022"
+        );
+        $course=(object)$course;
+        $courses[]=$course;
+        $courses=(object)$courses;
+        return view('Task1.student')->with('courses',$courses);
+    }
+    public function login()
+    {
+        return view('Task1.login');
+    }
 }
